@@ -1,0 +1,15 @@
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\CandyMachine.exe
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\CandyMachine.deps.json
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\CandyMachine.runtimeconfig.json
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\CandyMachine.dll
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\ref\CandyMachine.dll
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\CandyMachine.pdb
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.csproj.AssemblyReference.cache
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.AssemblyInfoInputs.cache
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.AssemblyInfo.cs
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.csproj.CoreCompileInputs.cache
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.dll
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\ref\CandyMachine.dll
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.pdb
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.genruntimeconfig.cache
