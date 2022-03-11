@@ -1,8 +1,4 @@
-using System;
-using System.IO;
-using CandyMachine;
-
-namespace Project
+namespace CandyMachine
 {
     public class Data
     {
@@ -32,9 +28,9 @@ namespace Project
            une variable structurée on l'appelle objet
            une case de la variable structurée on l'appelle attribut
            */
-          Candy newCandy = new Candy(name);//on déclare un objet(variable structurée) de type Candy et j'itilialise l'attribut(case) name de l'objet newCandy
-          newCandy.Price = price; //on affecte la valeur de price à l'attribut newCandy.Price de l'objet newCandy
-          newCandy.Stock = stock;//on affecte la valeur de price à l'attribut newCandy.Price de l'objet newCandy
+          Candy newCandy = new Candy(name,price,stock);//on déclare un objet(variable structurée) de type Candy et j'itilialise l'attribut(case) name de l'objet newCandy
+          //newCandy.Price = price; //on affecte la valeur de price à l'attribut newCandy.Price de l'objet newCandy
+          //newCandy.Stock = stock;//on affecte la valeur de price à l'attribut newCandy.Price de l'objet newCandy
           
           //j'ajoute mon nouvel bonbon récupéré (que j'ai maintenant dans l'objet newCandy) au tableau des candies à l'aide de la fonction AddCandy()
           candies = AddCandy(candies, newCandy);//la fonction AddCandy prend en entrée le tableau candies et l'objet qui contient le bonbon à ajouter au tableau
