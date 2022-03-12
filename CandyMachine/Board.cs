@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Project
+﻿namespace CandyMachine
 {
     public class Board
     {
@@ -11,12 +9,19 @@ namespace Project
             string receivedString = PadPrice(received);//formatter prix recu par l'utilisateur
             string returnedString = PadPrice(returned);//formatter prix retourné à l'utilisateur
             string messageString = PadBoth(message == "" ? "VOTRE CHOIX ?" : message, 33);//affichage message à l'utilisateur avant de compléter l'achat
+            string yo = PadBoth( "vide", 33);
             string resultString = PadBoth(result, 24);//message résultat après l'achat
             Console.Clear();
             Console.WriteLine($"-----------------------------------");
             Console.WriteLine($"|        Machine à bonbons        |");
             Console.WriteLine($"|----------------------------------");
+            if (messageString == yo)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            
             Console.WriteLine($"|{messageString}|");
+            Console.ResetColor();
             Console.WriteLine($"|----------------------------------");
             Console.WriteLine($"| 01 | 02 | 03 | 04 | 05 |-> { choiceString } <-|");
             Console.WriteLine($"|------------------------|--------|");
