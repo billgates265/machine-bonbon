@@ -10,37 +10,47 @@ namespace MyNamespace
     {
         public static void Main()
         {
-            Data dataManager = new Data();
-           Candy[] candies = dataManager.LoadCandies(); 
-         Console.WriteLine($"{candies[1].Name}");
-         Console.WriteLine($"le prix est de {candies[1].Price}");
-         Console.WriteLine($"et il en a {candies[1].Stock} en inventaire");
-            GetSelection();
-        }
-
-        public static void GetSelection()
-        {
-            byte selection = 0;
+            int selection = 0;
             Data dataManager = new Data();
             Candy[] candies = dataManager.LoadCandies();
+
+            GetSelection(selection);
+        }
+
+        public static int GetSelection(int selection)
+        {
+            do
+            { 
+                selection =  UserNumberInput("-> votre selection (1-25) : ");
+                
+            } while ((selection < 1) || (selection > 25));
+            
+            return selection;
+        }
+        public static int UserNumberInput(string texte)
+        {
+            // === Variable declaration
+            int output;
+            bool tryParse;
+            // === Function main
+
             do
             {
+                Console.Clear();
                 Board.Print();
-                Console.Write("-> votre selection (1-25) : ");
-                selection = byte.Parse(Console.ReadLine());
-            } while (selection < 1 || selection > 25);
+                Console.Write(texte);
+                tryParse = int.TryParse(Console.ReadLine(), out output);
+            } while (!tryParse);
 
-            if (candies[selection-1].Stock == 0)
-            {
-                Board.Print("vide");
-            }
-            else
-            {
-                Board.Print($"{candies[selection-1].Name}", selection, candies[selection-1].Price, 0m, 0m, "trop pauvre");
-
-            }
+            return (output);
         }
-        
-        
     }
-}
+} /*  if (candies[selection - 1].Stock == 0)
+                  {
+                      Board.Print("vide");
+                  }
+                  else
+                  {
+                      Board.Print($"{candies[selection - 1].Name}", selection, candies[selection - 1].Price, 0m, 0m,
+                          "trop pauvre");
+                  }*/
