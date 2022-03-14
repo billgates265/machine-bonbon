@@ -108,10 +108,6 @@ namespace MyNamespace
                         Console.ReadLine();
                         Main();
                     }
-                    
-                        
-                    
-
                     break;
                 case "1":
                     cash += 0.05m;
@@ -129,7 +125,6 @@ namespace MyNamespace
                     cash += 2m;
                     break;
             }
-
             return cash;
         }
     }
