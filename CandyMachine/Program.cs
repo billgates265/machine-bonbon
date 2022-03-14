@@ -98,16 +98,14 @@ namespace MyNamespace
                     if (cash > 0)
                     {
                         Console.Clear();
-                        Board.Print($"remboursé ", returned: cash, result: "appuyez sur enter");
-                        Console.ReadLine();
-                        Main();
+                        Board.Print($"remboursé ", returned: cash);
+                        BuyOrQuit();
                     }
                     else 
                     {
                         Console.Clear();
-                        Board.Print(returned: cash, result: "appuyez sur enter");
-                        Console.ReadLine();
-                        Main();
+                        Board.Print("annuler");
+                        BuyOrQuit();
                     }
                     break;
                 case "1":
