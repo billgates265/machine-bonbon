@@ -14,7 +14,7 @@ namespace MyNamespace
         {
             int selection = 0;
             decimal argent = 0m;
-            string quit;
+            
 
             selection = GetSelection(25);
             Candy candy = GetCandy(selection);
@@ -42,18 +42,8 @@ namespace MyNamespace
                 candy.Stock--;
                 Board.Print($"prenez votre bonbon", selection, candy.Price, argent, argent - candy.Price,
                     $"{candy.Stock} en stock");
-                Console.WriteLine("autre achat ? (y/n)");
-                quit = Console.ReadLine();
                 
-                if (quit == "n")
-                {
-                   Environment.FailFast("bonne fin de journee"); 
-                }
-                else
-                {
-                    Main();
-                }
-                
+                BuyOrQuit();
             }
         }
 
@@ -137,6 +127,23 @@ namespace MyNamespace
                     break;
             }
             return cash;
+        }
+
+        public static void BuyOrQuit()
+        {
+            string quit;
+            Console.WriteLine("autre achat ? (y/n)");
+            quit = Console.ReadLine();
+                
+            if (quit == "n")
+            {
+                Environment.FailFast("bonne fin de journee"); 
+            }
+            else
+            {
+                Main();
+            }
+
         }
     }
 } /*  */
