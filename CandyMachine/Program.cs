@@ -4,17 +4,15 @@ using System.Runtime.InteropServices;
 using CandyMachine;
 
 namespace MyNamespace
-{
+{ 
     class Program
     {
         public static Data dataManager = new Data();
         public static Candy[] candies = dataManager.LoadCandies();
-
         public static void Main()
         {
             int selection = 0;
             decimal argent = 0m;
-            
 
             selection = GetSelection(25);
             Candy candy = GetCandy(selection);
@@ -29,7 +27,7 @@ namespace MyNamespace
                 Board.Print($"{candy.Name}", selection, candy.Price, 0m, 0m,
                     $"{candy.Stock} en stock");
             }
-
+            
             do
             {
                 argent = GetCoin(argent);
@@ -46,7 +44,6 @@ namespace MyNamespace
                 BuyOrQuit();
             }
         }
-
         public static int GetSelection(int maxi)
         {
             int selection;
@@ -57,14 +54,11 @@ namespace MyNamespace
 
             return selection;
         }
-
         public static int UserNumberInput(string texte)
-        {
-            // === Variable declaration
+        { // === Variable declaration
             int output;
             bool tryParse;
             // === Function main
-
             do
             {
                 Console.Clear();
@@ -75,12 +69,10 @@ namespace MyNamespace
 
             return output;
         }
-
         public static Candy GetCandy(int input)
         {
             return candies[input - 1];
         }
-
         public static decimal GetCoin(decimal cash)
         {
             Console.WriteLine("[0] = Annuler\n" +
@@ -129,9 +121,8 @@ namespace MyNamespace
 
         public static void BuyOrQuit()
         {
-            string quit;
             Console.WriteLine("autre achat ? (y/n)");
-            quit = Console.ReadLine();
+            string quit = Console.ReadLine();
                 
             if (quit == "n")
             {
@@ -141,7 +132,6 @@ namespace MyNamespace
             {
                 Main();
             }
-
         }
     }
 } /*  */
