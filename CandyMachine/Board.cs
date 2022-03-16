@@ -9,17 +9,21 @@
             string receivedString = PadPrice(received);//formatter prix recu par l'utilisateur
             string returnedString = PadPrice(returned);//formatter prix retourné à l'utilisateur
             string messageString = PadBoth(message == "" ? "VOTRE CHOIX ?" : message, 33);//affichage message à l'utilisateur avant de compléter l'achat
-            string yo = PadBoth( "vide", 33);
+            string vide = PadBoth( "vide", 33);
             string resultString = PadBoth(result, 24);//message résultat après l'achat
+            string getbonbon = PadBoth($"prenez votre bonbon",33);
             Console.Clear();
             Console.WriteLine($"-----------------------------------");
             Console.WriteLine($"|        Machine à bonbons        |");
             Console.WriteLine($"|----------------------------------");
-            if (messageString == yo)
+            if (messageString == vide)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
             }
-            
+            else if (messageString == getbonbon)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
             Console.WriteLine($"|{messageString}|");
             Console.ResetColor();
             Console.WriteLine($"|----------------------------------");
