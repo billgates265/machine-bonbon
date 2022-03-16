@@ -121,16 +121,25 @@ namespace MyNamespace
 
         public static void BuyOrQuit()
         {
-            Console.WriteLine("autre achat ? (y/n)");
+            
+            Console.Write("autre achat ? (y/n) : ");
             string quit = Console.ReadLine();
                 
             if (quit == "n")
             {
-                Environment.FailFast("bonne fin de journee"); 
+               Board.Print(result:"bonne fin de journée");
+               Thread.Sleep(1000);
+               Environment.Exit(0);
+            }
+            else if (quit == "y")
+            {
+                Main();
             }
             else
             {
-                Main();
+                Console.Clear();
+                Board.Print();
+                BuyOrQuit();
             }
         }
     }
