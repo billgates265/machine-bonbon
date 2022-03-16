@@ -13,3 +13,4 @@ C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\n
 C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\ref\CandyMachine.dll
 C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.pdb
 C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\obj\Debug\net6.0\CandyMachine.genruntimeconfig.cache
+C:\Users\alexd\Documents\Nouveau dossier\machine bonbon\CandyMachine\bin\Debug\net6.0\candies.data

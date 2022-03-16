@@ -11,11 +11,10 @@ namespace MyNamespace
         public static Candy[] candies = dataManager.LoadCandies();
         public static void Main()
         {
-            int selection = 0;
             decimal argent = 0m;
-
-            selection = GetSelection(25);
+            int selection = GetSelection(25);
             Candy candy = GetCandy(selection);
+            
             if (candy.Stock == 0)
             {
                 Board.Print("vide", result: "enter pour autre choix");
