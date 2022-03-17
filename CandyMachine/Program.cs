@@ -7,15 +7,15 @@ namespace MyNamespace
 { 
     class Program
     {
-        public static Data dataManager = new Data();
+        public static Data dataManager = new Data();//declaration de mon tableau
         public static Candy[] candies = dataManager.LoadCandies();
-        public static void Main()
+        public static void Main() //appel de mon main
         {
             decimal argent = 0m;
-            int selection = GetSelection(25);
-            Candy candy = GetCandy(selection);
+            int selection = GetSelection(25); // declaration de ma variable avec getselection
+            Candy candy = GetCandy(selection); // declaration avec mon getcandy
             
-            if (candy.Stock == 0)
+            if (candy.Stock == 0) // veifiation du stock
             {
                 Board.Print("vide", result: "enter pour autre choix");
                 Console.ReadLine();
@@ -27,14 +27,14 @@ namespace MyNamespace
                     $"{candy.Stock} en stock");
             }
             
-            do
+            do  // boucle pour mon argent
             {
                 argent = GetCoin(argent);
                 Board.Print($"{candy.Name}", selection, candy.Price, argent, 0m,
                     $"{candy.Stock} en stock");
             } while (argent < candy.Price);
 
-            if (argent >= candy.Price)
+            if (argent >= candy.Price) // condition quand jai largent necessaire
             {
                 candy.Stock--;
                 Board.Print($"prenez votre bonbon", selection, candy.Price, argent, argent - candy.Price,
@@ -43,17 +43,17 @@ namespace MyNamespace
                 BuyOrQuit();
             }
         }
-        public static int GetSelection(int maxi)
+        public static int GetSelection(int maxi) //fonction pour allez chercher la selection du user
         {
             int selection;
             do
             {
                 selection = UserNumberInput("-> votre selection (1-25) : ");
-            } while (selection is < 1 || selection > maxi);
+            } while (selection is < 1 || selection > maxi); // tant que la selection est pas dans les parametre
 
             return selection;
         }
-        public static int UserNumberInput(string texte)
+        public static int UserNumberInput(string texte) //fonction pour enlever erreur quand autre chose quun nombre est entrer
         { // === Variable declaration
             int output;
             bool tryParse;
@@ -63,16 +63,16 @@ namespace MyNamespace
                 Console.Clear();
                 Board.Print();
                 Console.Write(texte);
-                tryParse = int.TryParse(Console.ReadLine(), out output);
+                tryParse = int.TryParse(Console.ReadLine(), out output); 
             } while (!tryParse);
 
             return output;
         }
-        public static Candy GetCandy(int input)
+        public static Candy GetCandy(int input) // fonction pour retourner la selection dans le tableau 
         {
             return candies[input - 1];
         }
-        public static decimal GetCoin(decimal cash)
+        public static decimal GetCoin(decimal cash) //fonction accumuler lentrer dargent 
         {
             Console.WriteLine("[0] = Annuler\n" +
                               "[1] = 5c\n" +
@@ -118,7 +118,7 @@ namespace MyNamespace
             return cash;
         }
 
-        public static void BuyOrQuit()
+        public static void BuyOrQuit() // fonction pour acheter a nouveau ou quitter sans avoir derreur
         {
             
             Console.Write("autre achat ? (y/n) : ");
