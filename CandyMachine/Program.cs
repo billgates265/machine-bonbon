@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+// les fichiers candies.data , board.cs ont ete modifiés
 using System.Runtime.InteropServices;
 using CandyMachine;
 
@@ -142,4 +142,4 @@ namespace MyNamespace
             }
         }
     }
-} /*  */
+} 
